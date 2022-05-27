@@ -1,0 +1,82 @@
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+ .container{
+    width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background: #84A98C;
+    border-radius: 15px;
+    padding: 40px 20px;
+ }
+ .container .card{
+     position: relative;
+     width: 320px;
+     height: 400px;
+     margin: 20px;
+     box-shadow: inset 5px 5px 5px rgba(0,0,0,0.05),
+                    inset -5px -5px 5px rgba(0,0,0,0.5),
+                    5px 5px 5px rgba(0,0,0,0.05),
+                    -5px -5px 5px rgba(0,0,0,0.5);
+    border-radius: 15px;
+ }
+
+.container .card .box{
+    position: absolute;
+    top: 20px;
+    left: 15px;
+    bottom: 20px;
+    right: 20px;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.2) ;
+    border-radius: 10px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+}
+.container .card .box .content{
+    text-align: center;
+    padding: 15px;
+}
+.container .card:hover .box{
+    transform: translateY(-50px);
+    background: linear-gradient(45deg, hsla(213, 77%, 14%, 1) 0%, hsla(202, 27%, 45%, 1) 100%);
+    box-shadow: 0 10px 10px rgba(0,0,0,0.5);
+}
+.container .card .box .content h2{
+    font-size: 8em;
+    position: absolute;
+    color: rgba(0,0,0,0.05);
+    top: -90px;
+    right: 10px;
+    transition: 0.5s;
+}
+.container .card:hover .box .content h2{
+    top: -110px;
+    color: rgba(0,0,0,0.1);
+}
+.container .card:hover .box .content h3,
+.container .card:hover .box .content p{
+    color: rgba(252, 252, 252, 0.671);
+}
+.container .card .box .content a{
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 25px;
+    background: #84A98C;
+    padding: 15px 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.5);
+    font-size: 1.2em;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+}
+.container .card .box .content a:hover{
+    background: orangered;
+}
